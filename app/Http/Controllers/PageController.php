@@ -28,8 +28,6 @@ class PageController extends Controller
                 return view('page.checkout',['product_cart'=>$cart->items,'totalPrice'=>$cart->totalPrice,
                 'totalQty'=>$cart->totalQty]);
             }
-
-        
     }
     public function getLoaisp($type)
     {   
