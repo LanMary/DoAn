@@ -35,14 +35,17 @@ Route::get('lien-he',[
     'as'=>'lienhe',
     'uses'=>'PageController@getContact'
 ]);
+
 Route::get('about',[
     'as'=>'about',
     'uses'=>'PageController@getAbout'
 ]);
+
 Route::get('checkout',[
     'as'=>'checkout',
     'uses'=>'PageController@checkout'
 ]);
+
 Route::get('add_to_cart/{id}',[
     'as'=>'themgiohang',
     'uses'=>'PageController@getAddtoCart'

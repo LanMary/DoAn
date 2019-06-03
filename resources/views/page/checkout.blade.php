@@ -18,8 +18,11 @@
         <div class="space50">&nbsp;</div>
        
         <div class="row">
-            <div class="col-sm-6 " style="padding-left:50px">
-                <h2>Đặt Hàng</h2>
+            <div class="col-sm-1 "></div>
+            <div class="col-sm-5 " style="padding-left:50px">
+                <div style="background-color:#0277b8" class="your-order-head">
+                    <h5>Đặt hàng</h5>
+                </div>
                 <div class="space20">&nbsp;</div>
                 <p>Phí vận chuyển cho bất kì loại sản phẩm nào được mua từ shop đều được free được áp dụng cho tất cả
                     mặt hàng .</p>
@@ -53,32 +56,10 @@
                                 class="fa fa-chevron-right"></i></button>
                     </div>
                 </form>
-            </div>
-            
-            {{-- <div class="col-sm-2" style="padding:0px; border:1px solid black;float:right">
-                <div class="row" style="padding-top:50px" >
-                    <div class="col-sm-2" style="padding:0px" >
-                        <img widh=100px height=100px src="source/assets/dest/images/product/{{$cart['item']['image']}}" alt="">
-                    </div>    
-                </div>
-                <div class="row" style="padding-top:50px" >
-                <ul>
-                    <li span style="font-size:16px"><b>Tên sản phẩm:</b>
-                        <ul style="list-style:none; padding-left:30px"> 
-                            <li>{{$cart['item']['name']}}</li>
-                        </ul>
-                    </li>
-                    <li span style="font-size:16px"><b>Số Lượng Sản Phẩm:  </b>
-                    <span style="font-size:22px;color:brown">{{$cart['qty']}}</span>
-                    </li>
-                    <li span style="font-size:16px"><b>Tổng tiền :</b><span style="font-size:22px;color:brown">
-                    </span>{{number_format($totalPrice)}}</span></li>
-                </ul>
-                </div>
-            </div> --}}
-            <div style="margin-right:0px" class="col-sm-6">
+            </div> 
+            <div style="margin-right:0px" class="col-sm-4">
                     <div class="your-order">
-                        <div class="your-order-head">
+                        <div style="background-color:#0277b8" class="your-order-head">
                             <h5>Đơn hàng của bạn</h5>
                         </div>
                         <div
@@ -98,8 +79,8 @@
                                             class="pull-left"
                                         />
                                         <div style="padding-top:30px;padding-left:30px" class="media-body">
-                                            <span class="font-large">
-                                                Tên sản phẩm: {{$cart['item']['name']}}
+                                            <span class=" color-gray font-large">
+                                                Tên sản phẩm: <span style="font-weight:bold; font-size:20px;padding-left:10px">{{$cart['item']['name']}}</span>
                                             </span>
                                             <span 
                                                 class="color-gray your-order-info"
@@ -107,11 +88,13 @@
                                             >
                                             <span
                                                 class="color-gray your-order-info"
-                                                >Số lượng: {{$cart['qty']}}</span
+                                                >Số lượng: <span style="font-weight:bold; font-size:20px;padding-left:50px">{{$cart['qty']}}</span>
+                                            </span
                                             >
                                             <span
                                                 class="color-gray your-order-info"
-                                                >Đơn giá: {{number_format($cart['item']['unit_price'])}}</span
+                                                >Đơn giá: <span style="font-weight:bold; font-size:20px;padding-left:60px">{{number_format($cart['item']['unit_price'])}}</span>
+                                            </span
                                             >
                                         </div>
                                     </div>
@@ -128,7 +111,7 @@
                                     </p>
                                 </div>
                                 <div class="pull-right">
-                                    <h5 class="color-black">{{number_format($totalPrice)}}</h5>
+                                    <h5 class="color-red">{{number_format($totalPrice)}}</h5>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>

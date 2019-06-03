@@ -126,7 +126,7 @@
 										</div>
 									</div>	
 									
-									
+									@endforeach
 									<div class="cart-caption">
 										<div class="cart-total text-right">Tổng tiền: <span style="font-size: 16px;font-weight: bold;color: red;" class="cart-total-value">{{number_format(Session('cart')->totalPrice)}}</span></div>
 										<div class="clearfix"></div>
@@ -136,7 +136,7 @@
 											<a href="{{route('checkout')}}" class="beta-btn primary text-center">Đặt hàng <i class="fa fa-chevron-right"></i></a>
 										</div>
 									</div>
-									@endforeach
+									
 								</div>
 							</div> 
 

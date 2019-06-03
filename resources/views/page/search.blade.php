@@ -19,7 +19,7 @@
 								<div class="col-sm-3" style="margin-top:10px;padding:5px;text-align:center">
 									
 									@if($new->promotion_price!=0)
-										<div class="ribbon-wrapper" style="top:2px;right: 22px;" ><div class="ribbon sale">Sale</div></div>
+										<div class="ribbon-wrapper" style="top:2px;right: 12px;" ><div class="ribbon sale">Sale</div></div>
 									@endif
 									<div class="single-item">
 										<div class="single-item-header ">

@@ -18,6 +18,7 @@ class PageController extends Controller
         $sp_km = Product::where('promotion_price','<>',0)->paginate(8);
         return view('page.trangchu',compact('slide','new_product','sp_km'));
     }
+    
     public function checkout()
     {
         if(Session('cart'))
@@ -58,6 +59,7 @@ class PageController extends Controller
     {
         return view('page.about');
     }
+
     public function getAddtoCart(Request $req,$id)
     {
         $product = Product::find($id);
@@ -67,6 +69,22 @@ class PageController extends Controller
         $req->session()->put('cart',$cart);
         return redirect()->back();
     }
+    public function DelItemCart($id)
+    {
+        $oldCart= Session::has('cart')?Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+        if(count($cart->items)>0)
+        {
+            Session::put('cart',$cart);
+        }
+        else
+        {
+            Session::forget('cart');
+        }
+        return redirect()->back();
+    }
+
 
     public function getSearch(REQUEST $req)
     {
@@ -82,22 +100,6 @@ class PageController extends Controller
                             return view('page.search',compact('product'));}
                         
        
-    }
-
-    public function DelItemCart($id)
-    {
-        $oldCart= Session::has('cart')?Session::get('cart'):null;
-        $cart = new Cart($oldCart);
-        $cart->removeItem($id);
-        if(count($cart->items)>0)
-        {
-            Session::put('cart',$cart);
-        }
-        else
-        {
-            Session::forget('cart');
-        }
-        return redirect()->back();
     }
 
 }
