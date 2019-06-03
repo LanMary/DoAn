@@ -1,0 +1,35 @@
+.single-item-title{ min-height: 30px;text-align: center;color:black;font-size: large;margin: 10px 0}
+.img
+{
+
+border: none;
+min-height: 250px;
+height: 10px;
+width: 100%;
+object-fit: fill;
+}
+.beta-btn.primary
+{
+    padding: 12px 15px 7px 15px;
+    
+    margin-left: 5px;
+    
+}
+.pull-left
+{
+    float: inherit;
+}
+.single-item-caption
+{
+    min-height: 40px;
+    padding-top: 10px
+}
+.single-item-header
+{
+    margin:0 auto;  
+    max-width: 300px;
+    min-height: 250px;
+    max-height: 280px;
+}
+.single-item-price
+{text-align: center}
