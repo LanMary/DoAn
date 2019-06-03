@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('index',[
 'as'=>'trang-chu',
 'uses'=>'PageController@getIndex'
@@ -23,14 +24,17 @@ Route::get('loai-san-pham/{type}',[
     'as'=>'loaisanpham',
     'uses'=>'PageController@getLoaisp'
 ]);
+
 Route::get('loaisanpham_all',[
     'as'=>'loaisanphamall',
     'uses'=>'PageController@getSpall'   
 ]);
+
 Route::get('chi-tiet-san-pham/{id}',[
     'as'=>'chitietsanpham',
     'uses'=>'PageController@getChitietsp'
 ]);
+
 Route::get('lien-he',[
     'as'=>'lienhe',
     'uses'=>'PageController@getContact'
@@ -50,6 +54,7 @@ Route::get('add_to_cart/{id}',[
     'as'=>'themgiohang',
     'uses'=>'PageController@getAddtoCart'
 ]);
+
 Route::get('del_cart/{id}',[
     'as'=>'xoagiohang',
     'uses'=>'PageController@DelItemCart'
